@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+    
+<title>Static JQuery search</title>
+</head>
+    <body>
+
+
+        <article>
+            <div class="container">
+                <div class="row">
+
+                        <div class="col-md-6">
+                                
+                                    
+                                    <div class="faq-wrap">
+                                            <h1>JQuery Search</h1>
+                                            <div>Using JQuery and bootstrap</div>
+                                                    
+                                        <div class="search-wrap">                                            
+                                            <div class="form-group">                                                    
+                                                    <input type="text" class="form-control" id="search_faq"  placeholder="Search contents" >                                                    
+                                                  
+                                            </div>
+                                        </div>
+                                        
+                                            <ul class="faq_list">
+                                                    
+                                                    <li>
+                                                        <h2>How can I install/upgrade Dummy Content?</h2>
+                                                        <div class="answers">
+                                                        <p>You can either install Dummy Content by using the core extension manager available in the Joomla! Administrator Control Panel, or by using the powerful Regular Labs Extension Manager.
+                                                            Keep in mind that when you update to a major new version </p>				    </div>
+                                                    </li>
+                                                    <li>
+                                                    <h2>Where can I download earlier versions?</h2>
+                                                    <div class="answers">
+                                                    <p>No</p>				    </div>
+                                                    </li>
+                                                    <li>
+                                                        <h2>One two  the truss in Grand Hall 2 included in the hire of the space?</h2>
+                                                        <div class="answers">
+                                                        <p>
+                                                            
+                                                            You have access to all previous free versions of all extensions on this website.
+                                                            If you have a subscription to an extension, you can also download any previous pro version of that extension.
+                                                            </p>				    </div>
+                                                    </li>   
+                                                    
+                                                    <li>
+                                                        <h2>How can I downgrade to an earlier version of Dummy Content?</h2>
+                                                        <div class="answers">
+                                                        <p>
+                                                            If for some reason you need to install an older version, it is best to uninstall the extension first.
+                                                            You will also have to uninstall the Regular Labs Library system plugin.
+                                                            </p>				    </div>
+                                                    </li>  
+                                                    <li>
+                                                        <h2>One two  the truss in Grand Hall 2 included in the hire of the space?</h2>
+                                                        <div class="answers">
+                                                        <p>
+                                                            
+                                                            You have access to all previous free versions of all extensions on this website.
+                                                            If you have a subscription to an extension, you can also download any previous pro version of that extension.
+                                                            </p>				    </div>
+                                                    </li>   
+                                                    
+                                                    <li>
+                                                        <h2>How can I downgrade to an earlier version of Dummy Content?</h2>
+                                                        <div class="answers">
+                                                        <p>
+                                                            If for some reason you need to install an older version, it is best to uninstall the extension first.
+                                                            You will also have to uninstall the Regular Labs Library system plugin.
+                                                            </p>				    </div>
+                                                    </li>                                  
+                                            </ul>	
+                                            
+                                        </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="banners">
+                                    <h1>Dynamic Search</h1>
+                                    <img src="images/14.jpg" alt="Technopark">
+                                </div>
+                            </div>
+                </div>
+            </div>
+
+        </article>
+        <footer></footer>
+            <script>
+                jQuery(document).ready(function() {                
+                jQuery("ul.faq_list > li h2").click(function(){
+                    var head = jQuery('ul.faq_list > li h2');
+                    var answer = jQuery(this).next(".answers");
+                    head.removeClass('active');jQuery('ul.faq_list > li .answers').slideUp();
+                    jQuery(this).toggleClass('active');                    
+                    if ( answer.is(":visible") ) {
+                    answer.slideUp();head.removeClass('active');	
+                    }
+                    else
+                    answer.slideDown();
+                });
+
+                jQuery('#search_faq').bind( "keypress keyup", function() {
+                    var searchtxt = jQuery(this).val().toLowerCase();
+                    if (searchtxt) 
+                        jQuery('#search_btn').addClass('close');	
+                    else
+                        jQuery('#search_btn').removeClass('close');
+                                            
+                        jQuery('ul.faq_list > li').hide();		
+                        var items = jQuery('ul.faq_list > li');	    
+                        jQuery.each(items,function(index, node){				    
+                                var heading = jQuery(node).find("h2").text().toLowerCase();
+                                var answer = jQuery(node).find(".answers").text().toLowerCase();                                
+                                if ( heading.toLowerCase().indexOf(searchtxt) >= 0  || answer.toLowerCase().indexOf(searchtxt) >= 0 ){
+                                    jQuery(node).closest('li').css("display","block");
+                                }
+                        })	
+                });
+                jQuery("#search_btn").click(function(){		
+                    jQuery('#search_faq').val('');
+                    jQuery('#search_faq').trigger('keypress');
+                });	
+                });
+            </script>             
+    </body>
+</html> 
