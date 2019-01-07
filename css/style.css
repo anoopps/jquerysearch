@@ -1,109 +1,108 @@
-
-@charset "utf-8";
-/* CSS Document */
-body {
-font-family: 'Open Sans', sans-serif;
-font-size: 14px;
-font-weight: normal;
-margin: 0px;
-padding: 0px;
-color: #383838;
-line-height: 23px;
-background-color: #fff;
-}
-p {
-margin: 8px 0px 0px 0px;
-padding: 0px 0px 0px 0px;
-text-align: justify;
-}
-h2{
-font-size: 14px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-line-height: normal;
-text-transform: uppercase;  
-text-align: left;
-color: #303030;
-}
-.content{
-padding: 0px;
-min-height: 400px;
-}
-a {
-color: #303030;
-text-decoration: none;
-cursor: pointer;
-text-transform: lowercase;
-}
-a:hover {
-color: #36b9fd;
-text-decoration: none;
-}
-a:focus {
-outline-style: none;
-}
-.clear {
-clear: both;
-}
-.clear_height {
-height: 10px;
-margin: 0px;
-padding: 0px;
-display: block;
-}
-hr {
-color: #eee;
-}
-table {
-width: 100%;
-}
-table tr td {
-padding: 2px;
-}
-small {
-color: #7e9904;
-font-size: 100%;
-}
-img {
-border: 0 none;
-max-width: 100%;
-}
-hr {
-border: 0px;
-border-bottom: 1px dotted #ccc;
-margin: 10px 0 10px 0;
-}
-.float_right{
-float: right;
-}
-.float_left{
-float: left;
-}
-#banners{
-    position: relative;
-    height: 700px; overflow: hidden;
-}
-#banners h1{
-    position: absolute;
-    top: 200px;
-    left: 20px;
-    padding: 0px 5px;
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: rgb(48, 48, 48);width: 100%;
-}
-.faq-wrap{
+    @charset "utf-8";
+    /* CSS Document */
+    body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    color: #383838;
+    line-height: 23px;
+    background-color: #fff;
+    }
+    p {
+    margin: 8px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: justify;
+    }
+    h2{
+    font-size: 14px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: normal;
+    text-transform: uppercase;  
+    text-align: left;
+    color: #303030;
+    }
+    .content{
+    padding: 0px;
+    min-height: 400px;
+    }
+    a {
+    color: #303030;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: lowercase;
+    }
+    a:hover {
+    color: #36b9fd;
+    text-decoration: none;
+    }
+    a:focus {
+    outline-style: none;
+    }
+    .clear {
+    clear: both;
+    }
+    .clear_height {
+    height: 10px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    }
+    hr {
+    color: #eee;
+    }
+    table {
     width: 100%;
-    padding:30px 0 0 0; 
-}
-.search-wrap{
-    padding: 10px 0;
-    width: 100%;
-}
-.faq_list{ width: 100%; padding: 10px 0 0 0; }
-.faq_list li{ list-style: none; display: block; height: auto;margin-bottom: 10px;}
-.faq_list li h2{ background-color: #444; color: #fff; padding: 10px 10px 10px 20px; cursor: pointer; text-transform:capitalize;}
-.answers {
-    display: none;
-    margin-top: 15px;
-}
+    }
+    table tr td {
+    padding: 2px;
+    }
+    small {
+    color: #7e9904;
+    font-size: 100%;
+    }
+    img {
+    border: 0 none;
+    max-width: 100%;
+    }
+    hr {
+    border: 0px;
+    border-bottom: 1px dotted #ccc;
+    margin: 10px 0 10px 0;
+    }
+    .float_right{
+    float: right;
+    }
+    .float_left{
+    float: left;
+    }
+    #banners{
+        position: relative;
+        height: 700px; overflow: hidden;
+    }
+    #banners h1{
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        padding: 0px 5px;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: rgb(48, 48, 48);width: 100%;
+    }
+    .faq-wrap{
+        width: 100%;
+        padding:30px 0 0 0; 
+    }
+    .search-wrap{
+        padding: 10px 0;
+        width: 100%;
+    }
+    .faq_list{ width: 100%; padding: 10px 0 0 0; }
+    .faq_list li{ list-style: none; display: block; height: auto;margin-bottom: 10px;}
+    .faq_list li h2{ background-color: #444; color: #fff; padding: 10px 10px 10px 20px; cursor: pointer; text-transform:capitalize;}
+    .answers {
+        display: none;
+        margin-top: 15px;
+    }
